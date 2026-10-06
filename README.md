@@ -1,31 +1,5 @@
 # Plataforma de Reservas
 
-## Equipe
-
-- Integrante 1:
-- Integrante 2, se houver:
-
-## Variante
-
-- Variante:
-- Regra específica:
-
-## Requisitos atendidos
-
-Atualize esta seção em cada marco do projeto.
-
-## Como executar
-
-```bash
-./mvnw test
-```
-
-No Windows:
-
-```powershell
-.\mvnw.cmd test
-```
-
 ## Estrutura
 
 As classes de domínio serão criadas pela equipe depois da escolha da variante.
@@ -73,3 +47,47 @@ Certifique-se de ter o Java 25 instalado. No terminal na raiz do projeto, execut
 ### Windows (PowerShell / Prompt):
 ```powershell
 .\mvnw.cmd test
+
+## 📐 Diagrama de Classes (Checkpoint 1)
+
+```mermaid
+classDiagram
+    class Reserva {
+        -String id
+        -Participante organizador
+        -EspacoEvento espaco
+        -Periodo periodo
+        -int quantidadeConvidados
+        -StatusReserva status
+        +cancelar()
+    }
+    class Participante {
+        -String id
+        -String nome
+        -String email
+    }
+    class EspacoEvento {
+        -String id
+        -String nome
+        -int capacidadeMaxima
+        -boolean ativo
+        +ativar()
+        +desativar()
+    }
+    class Periodo {
+        -LocalDateTime inicio
+        -LocalDateTime fim
+        +sobrepoe(Periodo)
+    }
+    class StatusReserva {
+        <<enumeration>>
+        PENDENTE
+        CONFIRMADA
+        CANCELADA
+        CONCLUIDA
+    }
+
+    Reserva --> Participante
+    Reserva --> EspacoEvento
+    Reserva --> Periodo
+    Reserva --> StatusReserva

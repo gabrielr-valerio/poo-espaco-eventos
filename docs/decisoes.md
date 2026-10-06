@@ -1,14 +1,7 @@
-# Decisões do projeto
+# Decisões de Arquitetura e Modelagem
 
-Registre decisões que afetem o modelo, a API, as dependências ou a evolução.
+## Checkpoint 1 — 06/10/2026
 
-## Modelo de registro
-
-### Título
-
-- Data:
-- Problema observado:
-- Alternativas consideradas:
-- Decisão:
-- Consequências:
-- Teste ou evidência que verifica a decisão:
+- **Exceções de Domínio Personalizadas:** Optou-se por criar uma hierarquia com a classe base `RegraNegocioException` estendendo `RuntimeException`. As exceções específicas carregam atributos imutáveis com o contexto da falha.
+- **Objeto de Valor `Periodo`:** Encapsula o intervalo de tempo e valida a invariante de que a data de início deve ser anterior à de término.
+- **Invariantes nos Construtores:** As entidades e records realizam validação de não-nulidade e regras de capacidade/antecedência diretamente no momento da instanciação.
