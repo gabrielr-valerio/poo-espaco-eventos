@@ -91,3 +91,8 @@ classDiagram
     Reserva --> EspacoEvento
     Reserva --> Periodo
     Reserva --> StatusReserva
+
+## 🔗 Dados de Entrega (Checkpoint 1)
+- **URL do Repositório:** https://github.com/gabrielr-valerio/poo-espaco-eventos
+- **Branch:** main
+- **Commit Hash:** `e974815`
