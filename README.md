@@ -101,3 +101,8 @@ classDiagram
 - **URL do Repositório:** https://github.com/gabrielr-valerio/poo-espaco-eventos
 - **Branch:** main
 - **Commit Hash:** `30fb4d3`
+
+## 🔗 Dados de Entrega (Checkpoint 3)
+- **URL do Repositório:** https://github.com/gabrielr-valerio/poo-espaco-eventos
+- **Branch:** main
+- **Commit Hash:** 44fb749
